@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'), url('https://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
+}
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'), url('https://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'LotteMartDream';
+  font-style: normal;
+  font-weight: 300;
+  src: url('https://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'), url('https://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
+}
+
+html {
+  font-family: 'LotteMartDream', sans-serif;
+}
+
+/* 상황별 버튼 모음 */
+.btn-type-1 {
+  @apply py-2 px-4 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg cursor-pointer;
+}
+.btn-primary {
+  @apply py-2 px-4 bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 btn-type-1;
+}
+.btn-secondary {
+  @apply py-2 px-4 bg-gray-600 hover:bg-gray-700 focus:ring-gray-500 btn-type-1;
+}
+.btn-success {
+  @apply py-2 px-4 bg-green-600 hover:bg-green-700 focus:ring-green-500 btn-type-1;
+}
+.btn-danger {
+  @apply py-2 px-4 bg-red-600 hover:bg-red-700 focus:ring-red-500 btn-type-1;
+}
+.btn-warning {
+  @apply py-2 px-4 bg-yellow-600 hover:bg-yellow-700 btn-type-1;
+}
+.btn-info {
+  @apply py-2 px-4 bg-purple-600 hover:bg-purple-700 btn-type-1;
+}
+.btn-link {
+  @apply underline text-blue-500 hover:text-red-500 cursor-pointer;
+}
+.btns > [class*="btn-"] + [class*="btn-"] {
+  margin-left: theme('spacing.2');
+}
